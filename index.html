@@ -1,49 +1,65 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ma254 Bau & Farm Service – LegendBuild.de</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ma254 Bau & Farm Service</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      background-color: #1e1e1e;
-      color: #f1f1f1;
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1e1e2f, #0f0f1a);
+      color: #ffffff;
     }
 
     header {
-      background-color: #2c2c2c;
-      padding: 20px;
       text-align: center;
-      border-bottom: 3px solid #4CAF50;
+      padding: 60px 20px 40px;
     }
 
     header h1 {
-      margin: 0;
-      font-size: 2.5em;
+      font-size: 3em;
       color: #4CAF50;
+      margin-bottom: 10px;
     }
 
-    main {
-      padding: 30px;
-      max-width: 800px;
+    header p {
+      font-size: 1.2em;
+      color: #ccc;
+    }
+
+    .container {
+      max-width: 1000px;
       margin: auto;
+      padding: 20px;
     }
 
-    section {
-      margin-bottom: 40px;
+    .card {
+      background: #2a2a40;
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
     }
 
     h2 {
       color: #4CAF50;
-      border-left: 5px solid #4CAF50;
-      padding-left: 10px;
+      font-size: 1.8em;
+      margin-bottom: 15px;
     }
 
     a {
-      color: #00aaff;
+      color: #00baff;
       text-decoration: none;
     }
 
@@ -53,125 +69,137 @@
 
     form input, form textarea {
       width: 100%;
-      padding: 10px;
-      margin-top: 8px;
-      margin-bottom: 15px;
-      background: #2a2a2a;
-      border: 1px solid #444;
+      padding: 12px;
+      margin: 8px 0 20px;
+      border: none;
+      border-radius: 8px;
+      background: #1c1c2c;
       color: white;
-      border-radius: 4px;
+      font-size: 1em;
     }
 
     button {
-      padding: 12px 20px;
+      padding: 12px 24px;
       background-color: #4CAF50;
       color: white;
-      border: none;
-      cursor: pointer;
       font-weight: bold;
-      border-radius: 4px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.2s ease-in-out;
     }
 
     button:hover {
-      background-color: #45a049;
+      background-color: #43a047;
     }
 
     footer {
-      background-color: #2c2c2c;
-      color: #aaa;
       text-align: center;
-      padding: 15px;
+      padding: 20px;
       font-size: 0.9em;
+      color: #999;
     }
 
     #statusText {
       text-align: center;
-      margin-top: 10px;
+      font-size: 1em;
+      margin-top: 15px;
       color: #4CAF50;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Ma254 Bau- & Farm-Service</h1>
-    <p>LegendBuild.de – Dein zuverlässiger Partner für Minecraft-Projekte</p>
+    <h1>Ma254 Bau & Farm</h1>
+    <p>Dein Minecraft-Service auf <strong>LegendBuild.de</strong></p>
   </header>
 
-  <main>
-    <section>
-      <h2>📌 Über uns</h2>
-      <p>Wir bauen, farmen und automatisieren für dich auf dem Citybuild-Server <strong>LegendBuild.de</strong>.</p>
-      <p>Egal ob Redstone-Farmen, schöne Häuser oder ganze Städte – wir übernehmen deinen Auftrag.</p>
-    </section>
+  <div class="container">
 
-    <section>
+    <div class="card">
+      <h2>🏗️ Über uns</h2>
+      <p>Wir übernehmen deine Bau- oder Farmprojekte auf dem Citybuild-Server <strong>LegendBuild.de</strong>. Von einfachen Farmen bis hin zu komplexen Gebäuden – schnell, schön und zuverlässig.</p>
+    </div>
+
+    <div class="card">
       <h2>📬 Kontakt</h2>
-      <p>Discord: <a href="https://discord.gg/Gcw8rbjC6H" target="_blank">https://discord.gg/Gcw8rbjC6H</a></p>
-      <p>Oder direkt ingame: <code>/msg Ma254</code> oder <code>/msg MJ2311</code></p>
-    </section>
+      <p>➡️ <strong>Discord:</strong> <a href="https://discord.gg/Gcw8rbjC6H" target="_blank">discord.gg/Gcw8rbjC6H</a></p>
+      <p>➡️ <strong>Ingame:</strong> <code>/msg Ma254</code> oder <code>/msg MJ2311</code></p>
+    </div>
 
-    <section id="auftrag">
-      <h2>📝 Projektanfrage senden</h2>
+    <div class="card">
+      <h2>📅 Projektanfrage</h2>
       <form id="projektForm">
         <label>👤 Spielername:</label>
-        <input type="text" name="spieler" required>
+        <input type="text" name="spieler" required />
 
-        <label>🏗️ Projektbeschreibung:</label>
+        <label>🧱 Projektbeschreibung:</label>
         <textarea name="projekt" rows="4" required></textarea>
 
-        <label>📅 Deadline (z. B. 15.06.2025):</label>
-        <input type="text" name="deadline" required>
+        <label>📆 Deadline:</label>
+        <input type="text" name="deadline" placeholder="z. B. 15.06.2025" required />
 
         <label>💰 Budget (Coins oder €):</label>
-        <input type="text" name="budget" required>
+        <input type="text" name="budget" required />
 
-        <button type="submit">Anfrage senden</button>
+        <button type="submit">✅ Anfrage senden</button>
+        <p id="statusText"></p>
       </form>
-      <p id="statusText"></p>
-    </section>
-  </main>
+    </div>
+
+  </div>
 
   <footer>
-    Erstellt von Ma254
+    Erstellt von Ma254 – © 2025
   </footer>
 
   <script>
     const webhookUrl = "https://discord.com/api/webhooks/1380941664537018509/7-sH9hQzyX1mTNxJOWFMIGZh2t8U3MTdSd7ZNYWHDuvwYND6vMwMKHq-oP2I-p-Wz_Zl";
 
-    document.getElementById("projektForm").addEventListener("submit", function(e) {
+    document.getElementById("projektForm").addEventListener("submit", async function (e) {
       e.preventDefault();
 
       const form = e.target;
-      const data = {
-        spieler: form.spieler.value,
-        projekt: form.projekt.value,
-        deadline: form.deadline.value,
-        budget: form.budget.value,
+      const spieler = form.spieler.value;
+      const projekt = form.projekt.value;
+      const deadline = form.deadline.value;
+      const budget = form.budget.value;
+
+      const payload = {
+        content: `📩 **Neue Projektanfrage**\n\n👤 **Spieler:** ${spieler}\n🧱 **Projekt:** ${projekt}\n📆 **Deadline:** ${deadline}\n💰 **Budget:** ${budget}`
       };
 
-      const discordMessage = {
-        content: `📩 **Neue Projektanfrage**\n\n👤 **Spieler**: ${data.spieler}\n🏗️ **Projekt**: ${data.projekt}\n📅 **Deadline**: ${data.deadline}\n💰 **Budget**: ${data.budget}`
-      };
+      const statusText = document.getElementById("statusText");
+      statusText.textContent = "⏳ Wird gesendet...";
 
-      fetch(webhookUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(discordMessage)
-      }).then(response => {
+      try {
+        const response = await fetch(webhookUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+
         if (response.ok) {
-          document.getElementById("statusText").textContent = "✅ Anfrage erfolgreich gesendet!";
+          statusText.textContent = "✅ Anfrage erfolgreich gesendet!";
+          statusText.style.color = "#4CAF50";
           form.reset();
         } else {
-          document.getElementById("statusText").textContent = "❌ Fehler beim Senden. Bitte später versuchen.";
+          statusText.textContent = "❌ Fehler beim Senden!";
+          statusText.style.color = "red";
         }
-      }).catch(() => {
-        document.getElementById("statusText").textContent = "❌ Netzwerkfehler. Bitte erneut versuchen.";
-      });
+      } catch {
+        statusText.textContent = "❌ Netzwerkfehler!";
+        statusText.style.color = "red";
+      }
     });
   </script>
-
 </body>
 </html>

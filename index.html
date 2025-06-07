@@ -2,202 +2,172 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ma254 Bau & Farm Service</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: radial-gradient(circle at top, #101020, #050510);
-      color: #ffffff;
-      overflow-x: hidden;
+      background: linear-gradient(to bottom right, #0d0d0d, #1a1a1a);
+      font-family: 'Outfit', sans-serif;
+      color: white;
+      line-height: 1.6;
     }
-
     header {
-      text-align: center;
-      padding: 100px 20px 60px;
-      background: linear-gradient(135deg, #1a1a2e, #0f3460);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-    }
-
-    header h1 {
-      font-size: 3.5em;
-      color: #00ffae;
-      margin-bottom: 10px;
-      letter-spacing: 1px;
-    }
-
-    header p {
-      font-size: 1.3em;
-      color: #cceeff;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-
-    .card {
-      background: #1a1a2f;
-      border: 1px solid #00ffae33;
-      border-radius: 20px;
       padding: 40px;
-      margin-bottom: 40px;
-      box-shadow: 0 10px 25px rgba(0, 255, 174, 0.1);
-      transition: 0.3s ease;
+      text-align: center;
+      background: #111;
+      border-bottom: 2px solid #2a2a2a;
     }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(0, 255, 174, 0.2);
+    header h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
     }
-
+    header p {
+      font-size: 18px;
+      color: #aaa;
+    }
+    section {
+      padding: 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
     h2 {
-      font-size: 2em;
-      color: #00ffae;
+      font-size: 28px;
       margin-bottom: 20px;
     }
-
-    a {
-      color: #4defff;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    form input, form textarea {
+    input, textarea {
       width: 100%;
-      padding: 14px;
-      margin: 12px 0;
-      border: 1px solid #00ffae44;
-      border-radius: 12px;
-      background: #101020;
+      padding: 10px;
+      margin: 8px 0 20px;
+      background: #1e1e1e;
+      border: 1px solid #333;
       color: white;
-      font-size: 1em;
+      border-radius: 5px;
     }
-
     button {
-      padding: 14px 28px;
-      background: #00ffae;
-      color: #000;
+      padding: 12px 24px;
+      background: #4caf50;
+      color: white;
       border: none;
-      border-radius: 12px;
-      font-weight: bold;
-      font-size: 1em;
+      border-radius: 5px;
       cursor: pointer;
-      transition: background 0.2s ease;
     }
-
-    button:hover {
-      background: #00e699;
+    a {
+      color: #4fc3f7;
     }
-
-    #statusText {
-      margin-top: 15px;
-      font-size: 1em;
-      color: #00ffae;
-    }
-
     footer {
       text-align: center;
-      padding: 40px 20px;
-      font-size: 0.9em;
-      color: #666;
-      border-top: 1px solid #222;
+      padding: 30px;
+      background: #0d0d0d;
+      color: #777;
+      font-size: 14px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #1e1e1e;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid #2c2c2c;
+    }
+    th {
+      background: #222;
+    }
+    .review {
+      background: #1e1e1e;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 15px;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Ma254 Bau & Farm</h1>
-    <p>Professionelle Minecraft-Projekte auf LegendBuild.de</p>
+    <h1>Ma254 Bau & Farm Service</h1>
+    <p>LegendBuild.de – Professionelle Bau- und Farmhilfe!</p>
   </header>
 
-  <div class="container">
+  <section>
+    <h2>🎮 Kontakt</h2>
+    <p>Discord: <a href="https://discord.gg/Gcw8rbjC6H" target="_blank">discord.gg/Gcw8rbjC6H</a><br>
+    Ingame: /msg Ma254 oder MJ2311</p>
+  </section>
 
-    <div class="card">
-      <h2>🏠 Was wir bieten</h2>
-      <p>Ob automatische Farmen, prunkvolle Villen oder unterirdische Basen – wir bauen alles nach deinen Wünschen. Schnell, effizient und detailreich!</p>
-    </div>
+  <section>
+    <h2>📅 Projektanfrage</h2>
+    <form id="requestForm">
+      <input type="text" name="spieler" placeholder="Spielername" required>
+      <input type="text" name="projekt" placeholder="Wunschprojekt" required>
+      <input type="text" name="deadline" placeholder="Deadline (z. B. 15.06.2025)" required>
+      <input type="text" name="budget" placeholder="Budget (z. B. 2000 Coins)" required>
+      <button type="submit">✅ Anfrage senden</button>
+    </form>
+    <p id="formStatus"></p>
+  </section>
 
-    <div class="card">
-      <h2>💬 Kontakt</h2>
-      <p>➡️ <strong>Discord:</strong> <a href="https://discord.gg/Gcw8rbjC6H" target="_blank">discord.gg/Gcw8rbjC6H</a></p>
-      <p>➡️ <strong>Ingame:</strong> <code>/msg Ma254</code> oder <code>/msg MJ2311</code></p>
-    </div>
+  <section>
+    <h2>🎮 Live-Status</h2>
+    <p id="player-status">⏳ Lade Spielerstatus...</p>
 
-    <div class="card">
-      <h2>📅 Projektanfrage</h2>
-      <form id="projektForm">
-        <label>Spielername</label>
-        <input type="text" name="spieler" required />
+    <h2 style="margin-top: 40px;">⭐ Kundenbewertungen</h2>
+    <div class="review"><strong>MJ2311</strong><br>⭐⭐⭐⭐⭐<br><em>„Extrem schneller Bau – top Qualität!“</em></div>
+    <div class="review"><strong>LegendSteve</strong><br>⭐⭐⭐⭐☆<br><em>„Meine Farm läuft perfekt, danke!“</em></div>
+    <div class="review"><strong>CoolyGoon</strong><br>⭐⭐⭐⭐⭐<br><em>„Sehr freundlich und kreativ gebaut!“</em></div>
 
-        <label>Projektbeschreibung</label>
-        <textarea name="projekt" rows="4" required></textarea>
-
-        <label>Deadline</label>
-        <input type="text" name="deadline" placeholder="z. B. 15.06.2025" required />
-
-        <label>Budget (Coins oder €)</label>
-        <input type="text" name="budget" required />
-
-        <button type="submit">Anfrage senden</button>
-        <div id="statusText"></div>
-      </form>
-    </div>
-
-  </div>
+    <h2 style="margin-top: 40px;">📅 Verfügbarkeit</h2>
+    <table>
+      <tr><th>Woche</th><th>Status</th></tr>
+      <tr><td>KW 24 (10.–16. Juni)</td><td>✅ Noch 2 freie Slots</td></tr>
+      <tr><td>KW 25 (17.–23. Juni)</td><td>🟡 1 Slot verfügbar</td></tr>
+      <tr><td>KW 26 (24.–30. Juni)</td><td>❌ Ausgebucht</td></tr>
+    </table>
+  </section>
 
   <footer>
-    Erstellt von Ma254 – © 2025
+    Erstellt von Ma254
   </footer>
 
   <script>
-    const webhookUrl = "https://discord.com/api/webhooks/1380941664537018509/7-sH9hQzyX1mTNxJOWFMIGZh2t8U3MTdSd7ZNYWHDuvwYND6vMwMKHq-oP2I-p-Wz_Zl";
+    // Spielerstatus (simuliert)
+    const playerOnline = true;
+    const statusBox = document.getElementById("player-status");
+    if (playerOnline) {
+      statusBox.innerHTML = "✅ Ma254 ist aktuell <strong>online</strong> auf LegendBuild.de";
+      statusBox.style.color = "lightgreen";
+    } else {
+      statusBox.innerHTML = "❌ Ma254 ist derzeit <strong>offline</strong>";
+      statusBox.style.color = "salmon";
+    }
 
-    document.getElementById("projektForm").addEventListener("submit", async function (e) {
+    // Anfrage-Formular mit Webhook senden
+    document.getElementById("requestForm").addEventListener("submit", async function(e) {
       e.preventDefault();
+      const form = new FormData(e.target);
+      const message = `📥 Neue Projektanfrage:\n👤 Spieler: ${form.get("spieler")}\n🏗️ Projekt: ${form.get("projekt")}\n🕒 Deadline: ${form.get("deadline")}\n💰 Budget: ${form.get("budget")}`;
+      const webhookUrl = "https://discord.com/api/webhooks/1380941664537018509/7-sH9hQzyX1mTNxJOWFMIGZh2t8U3MTdSd7ZNYWHDuvwYND6vMwMKHq-oP2I-p-Wz_Zl";
 
-      const form = e.target;
-      const spieler = form.spieler.value;
-      const projekt = form.projekt.value;
-      const deadline = form.deadline.value;
-      const budget = form.budget.value;
+      const res = await fetch(webhookUrl, {
+        method: "POST",
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ content: message })
+      });
 
-      const payload = {
-        content: `📬 **Neue Projektanfrage**\n\n**Spieler:** ${spieler}\n**Projekt:** ${projekt}\n**Deadline:** ${deadline}\n**Budget:** ${budget}`
-      };
-
-      const statusText = document.getElementById("statusText");
-      statusText.textContent = "⏳ Wird gesendet...";
-
-      try {
-        const response = await fetch(webhookUrl, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
-        });
-
-        if (response.ok) {
-          statusText.textContent = "✅ Anfrage gesendet!";
-          form.reset();
-        } else {
-          statusText.textContent = "❌ Fehler beim Senden.";
-        }
-      } catch {
-        statusText.textContent = "❌ Netzwerkfehler.";
+      const status = document.getElementById("formStatus");
+      if (res.ok) {
+        status.textContent = "✅ Anfrage erfolgreich gesendet!";
+        status.style.color = "lightgreen";
+        e.target.reset();
+      } else {
+        status.textContent = "❌ Fehler beim Senden der Anfrage.";
+        status.style.color = "salmon";
       }
     });
   </script>
 </body>
 </html>
-

@@ -13,53 +13,59 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #1e1e2f, #0f0f1a);
+      background: radial-gradient(circle at top, #101020, #050510);
       color: #ffffff;
+      overflow-x: hidden;
     }
 
     header {
       text-align: center;
-      padding: 60px 20px 40px;
+      padding: 100px 20px 60px;
+      background: linear-gradient(135deg, #1a1a2e, #0f3460);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.4);
     }
 
     header h1 {
-      font-size: 3em;
-      color: #4CAF50;
+      font-size: 3.5em;
+      color: #00ffae;
       margin-bottom: 10px;
+      letter-spacing: 1px;
     }
 
     header p {
-      font-size: 1.2em;
-      color: #ccc;
+      font-size: 1.3em;
+      color: #cceeff;
     }
 
     .container {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
-      padding: 20px;
+      padding: 40px 20px;
     }
 
     .card {
-      background: #2a2a40;
-      border-radius: 16px;
-      padding: 30px;
-      margin-bottom: 30px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-      transition: transform 0.2s;
+      background: #1a1a2f;
+      border: 1px solid #00ffae33;
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 40px;
+      box-shadow: 0 10px 25px rgba(0, 255, 174, 0.1);
+      transition: 0.3s ease;
     }
 
     .card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 255, 174, 0.2);
     }
 
     h2 {
-      color: #4CAF50;
-      font-size: 1.8em;
-      margin-bottom: 15px;
+      font-size: 2em;
+      color: #00ffae;
+      margin-bottom: 20px;
     }
 
     a {
-      color: #00baff;
+      color: #4defff;
       text-decoration: none;
     }
 
@@ -69,49 +75,43 @@
 
     form input, form textarea {
       width: 100%;
-      padding: 12px;
-      margin: 8px 0 20px;
-      border: none;
-      border-radius: 8px;
-      background: #1c1c2c;
+      padding: 14px;
+      margin: 12px 0;
+      border: 1px solid #00ffae44;
+      border-radius: 12px;
+      background: #101020;
       color: white;
       font-size: 1em;
     }
 
     button {
-      padding: 12px 24px;
-      background-color: #4CAF50;
-      color: white;
-      font-weight: bold;
+      padding: 14px 28px;
+      background: #00ffae;
+      color: #000;
       border: none;
-      border-radius: 8px;
+      border-radius: 12px;
+      font-weight: bold;
       font-size: 1em;
       cursor: pointer;
-      transition: background 0.2s ease-in-out;
+      transition: background 0.2s ease;
     }
 
     button:hover {
-      background-color: #43a047;
+      background: #00e699;
+    }
+
+    #statusText {
+      margin-top: 15px;
+      font-size: 1em;
+      color: #00ffae;
     }
 
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 40px 20px;
       font-size: 0.9em;
-      color: #999;
-    }
-
-    #statusText {
-      text-align: center;
-      font-size: 1em;
-      margin-top: 15px;
-      color: #4CAF50;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2em;
-      }
+      color: #666;
+      border-top: 1px solid #222;
     }
   </style>
 </head>
@@ -119,18 +119,18 @@
 
   <header>
     <h1>Ma254 Bau & Farm</h1>
-    <p>Dein Minecraft-Service auf <strong>LegendBuild.de</strong></p>
+    <p>Professionelle Minecraft-Projekte auf LegendBuild.de</p>
   </header>
 
   <div class="container">
 
     <div class="card">
-      <h2>🏗️ Über uns</h2>
-      <p>Wir übernehmen deine Bau- oder Farmprojekte auf dem Citybuild-Server <strong>LegendBuild.de</strong>. Von einfachen Farmen bis hin zu komplexen Gebäuden – schnell, schön und zuverlässig.</p>
+      <h2>🏠 Was wir bieten</h2>
+      <p>Ob automatische Farmen, prunkvolle Villen oder unterirdische Basen – wir bauen alles nach deinen Wünschen. Schnell, effizient und detailreich!</p>
     </div>
 
     <div class="card">
-      <h2>📬 Kontakt</h2>
+      <h2>💬 Kontakt</h2>
       <p>➡️ <strong>Discord:</strong> <a href="https://discord.gg/Gcw8rbjC6H" target="_blank">discord.gg/Gcw8rbjC6H</a></p>
       <p>➡️ <strong>Ingame:</strong> <code>/msg Ma254</code> oder <code>/msg MJ2311</code></p>
     </div>
@@ -138,20 +138,20 @@
     <div class="card">
       <h2>📅 Projektanfrage</h2>
       <form id="projektForm">
-        <label>👤 Spielername:</label>
+        <label>Spielername</label>
         <input type="text" name="spieler" required />
 
-        <label>🧱 Projektbeschreibung:</label>
+        <label>Projektbeschreibung</label>
         <textarea name="projekt" rows="4" required></textarea>
 
-        <label>📆 Deadline:</label>
+        <label>Deadline</label>
         <input type="text" name="deadline" placeholder="z. B. 15.06.2025" required />
 
-        <label>💰 Budget (Coins oder €):</label>
+        <label>Budget (Coins oder €)</label>
         <input type="text" name="budget" required />
 
-        <button type="submit">✅ Anfrage senden</button>
-        <p id="statusText"></p>
+        <button type="submit">Anfrage senden</button>
+        <div id="statusText"></div>
       </form>
     </div>
 
@@ -174,7 +174,7 @@
       const budget = form.budget.value;
 
       const payload = {
-        content: `📩 **Neue Projektanfrage**\n\n👤 **Spieler:** ${spieler}\n🧱 **Projekt:** ${projekt}\n📆 **Deadline:** ${deadline}\n💰 **Budget:** ${budget}`
+        content: `📬 **Neue Projektanfrage**\n\n**Spieler:** ${spieler}\n**Projekt:** ${projekt}\n**Deadline:** ${deadline}\n**Budget:** ${budget}`
       };
 
       const statusText = document.getElementById("statusText");
@@ -188,18 +188,16 @@
         });
 
         if (response.ok) {
-          statusText.textContent = "✅ Anfrage erfolgreich gesendet!";
-          statusText.style.color = "#4CAF50";
+          statusText.textContent = "✅ Anfrage gesendet!";
           form.reset();
         } else {
-          statusText.textContent = "❌ Fehler beim Senden!";
-          statusText.style.color = "red";
+          statusText.textContent = "❌ Fehler beim Senden.";
         }
       } catch {
-        statusText.textContent = "❌ Netzwerkfehler!";
-        statusText.style.color = "red";
+        statusText.textContent = "❌ Netzwerkfehler.";
       }
     });
   </script>
 </body>
 </html>
+

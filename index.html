@@ -3,312 +3,309 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Ma254 Bau & Farm Service | LegendBuild.de</title>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet" />
+<title>Bau & Farm Unternehmen – LegendBuild.de</title>
 <style>
-  /* Reset & Basics */
-  * {
-    box-sizing: border-box;
-  }
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
   body {
-    margin: 0;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    font-family: 'Outfit', sans-serif;
-    color: #e1e8f0;
-    line-height: 1.5;
+    margin: 0; padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #0d1117, #161b22);
+    color: #c9d1d9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  header {
+    background: #0f64f2;
+    padding: 20px;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px #0f64f2;
+  }
+  main {
+    flex: 1;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+  }
+  h1, h2 {
+    color: #58a6ff;
+    margin-bottom: 15px;
+  }
+  section {
+    margin-bottom: 50px;
+    background: #161b22;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 0 15px #0f64f2aa;
   }
   a {
-    color: #4fc3f7;
+    color: #58a6ff;
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-weight: 600;
   }
   a:hover {
-    color: #81d4fa;
+    text-decoration: underline;
   }
-
-  /* Container */
-  .container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px 60px;
+  button, input[type="submit"] {
+    background: #0f64f2;
+    border: none;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-weight: 600;
   }
-
-  /* Header */
-  header {
-    background: rgba(0,0,0,0.5);
-    padding: 40px 20px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(79,195,247,0.4);
-    margin-bottom: 50px;
-  }
-  header h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    margin: 0 0 10px;
-  }
-  header p {
-    font-weight: 400;
-    font-size: 1.2rem;
-    color: #a0b8c6;
-    margin: 0;
-  }
-
-  /* Section Titles */
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 25px;
-    font-weight: 700;
-    border-left: 5px solid #4fc3f7;
-    padding-left: 12px;
-    color: #a0c4ff;
-    text-shadow: 0 0 6px #4fc3f7;
-  }
-
-  /* Kontakt */
-  #kontakt p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
-
-  /* Form */
-  form {
-    background: rgba(0,0,0,0.6);
-    padding: 25px 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 25px rgba(79,195,247,0.5);
-    max-width: 600px;
-    margin: auto;
+  button:hover, input[type="submit"]:hover {
+    background: #0a4bc0;
   }
   input, textarea {
     width: 100%;
-    padding: 14px 16px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    border: none;
-    background: #203a43;
-    color: #e1e8f0;
-    font-size: 1rem;
-    font-weight: 500;
-    transition: background 0.3s ease;
-    box-shadow: inset 2px 2px 6px #1b2b34, inset -2px -2px 6px #274653;
-  }
-  input:focus, textarea:focus {
-    outline: none;
-    background: #2c5364;
-    box-shadow: 0 0 8px #4fc3f7;
-  }
-  button {
-    display: block;
-    width: 100%;
-    padding: 15px 0;
-    background: #4fc3f7;
-    color: #0a192f;
-    font-weight: 700;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(79,195,247,0.6);
-    transition: background 0.3s ease, transform 0.2s ease;
-  }
-  button:hover {
-    background: #81d4fa;
-    transform: translateY(-3px);
-  }
-
-  /* Status */
-  #player-status {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 35px;
-    text-align: center;
-  }
-
-  /* Kundenbewertungen */
-  .reviews {
-    display: grid;
-    gap: 20px;
-    margin-bottom: 40px;
-  }
-  .review-card {
-    background: rgba(0,0,0,0.5);
-    padding: 20px 25px;
+    padding: 12px 15px;
+    margin: 8px 0 20px 0;
     border-radius: 12px;
-    box-shadow: 0 0 15px rgba(79,195,247,0.4);
+    border: none;
+    background: #0d1117;
+    color: #c9d1d9;
+    font-size: 1rem;
+    resize: vertical;
   }
-  .review-card strong {
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: #81d4fa;
+  input::placeholder, textarea::placeholder {
+    color: #8b949e;
   }
-  .review-stars {
-    margin: 8px 0 10px;
-    color: #fdd835; /* gold color for stars */
-    font-size: 1.15rem;
+  /* FAQ Bot Styles */
+  .faq-bot {
+    max-width: 600px;
+    margin: 0 auto;
   }
-  .review-text {
-    font-style: italic;
-    font-weight: 500;
-    color: #cfd8dc;
+  #chat {
+    height: 320px;
+    background: #0d1117;
+    padding: 15px;
+    overflow-y: auto;
+    border-radius: 12px;
+    border: 1.5px solid #0f64f2;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px #0f64f2bb;
   }
-
-  /* Tabelle Verfügbarkeit */
-  table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0 12px;
+  .message {
+    margin: 10px 0;
+    padding: 12px 20px;
+    border-radius: 30px;
+    max-width: 75%;
+    clear: both;
+    font-size: 0.95rem;
+    line-height: 1.3;
   }
-  th, td {
-    padding: 14px 20px;
-    background: rgba(0,0,0,0.6);
-    color: #e1e8f0;
-    font-weight: 600;
-    text-align: center;
-    border-radius: 10px;
+  .user-msg {
+    background: #0f64f2;
+    color: white;
+    float: right;
+    text-align: right;
+    box-shadow: 0 0 8px #0f64f2;
   }
-  th {
-    background: #4fc3f7;
-    color: #0a192f;
-    font-weight: 700;
+  .bot-msg {
+    background: #21262d;
+    color: #c9d1d9;
+    float: left;
+    box-shadow: 0 0 8px #58a6ff;
   }
-
+  #chat-form {
+    display: flex;
+    gap: 12px;
+  }
+  #user-input {
+    flex: 1;
+    border-radius: 30px;
+    border: 1.5px solid #0f64f2;
+    background: #0d1117;
+    color: #c9d1d9;
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+  #user-input:focus {
+    outline: none;
+    border-color: #58a6ff;
+  }
   /* Footer */
   footer {
     text-align: center;
-    padding: 25px 20px;
+    padding: 15px 0;
+    background: #0d1117;
+    color: #8b949e;
     font-size: 0.9rem;
-    color: #78909c;
-    border-top: 1px solid rgba(127,182,255,0.3);
-    margin-top: 60px;
+    user-select: none;
+    border-top: 1px solid #21262d;
   }
-
   /* Responsive */
-  @media (max-width: 600px) {
-    h2 {
-      font-size: 1.6rem;
+  @media (max-width: 650px) {
+    main {
+      margin: 20px;
     }
-    header h1 {
-      font-size: 2rem;
+    #chat {
+      height: 260px;
     }
-    form {
-      padding: 20px;
+    .message {
+      max-width: 90%;
     }
   }
 </style>
 </head>
 <body>
-  <header>
-    <h1>Ma254 Bau & Farm Service</h1>
-    <p>LegendBuild.de – Professionelle Bau- und Farmhilfe</p>
-  </header>
 
-  <main class="container">
+<header>
+  Bau & Farm Unternehmen – LegendBuild.de
+</header>
 
-    <section id="kontakt">
-      <h2>🎮 Kontakt</h2>
-      <p>Discord: <a href="https://discord.gg/Gcw8rbjC6H" target="_blank" rel="noopener noreferrer">discord.gg/Gcw8rbjC6H</a><br>
-         Ingame: /msg <strong>Ma254</strong> oder <strong>MJ2311</strong></p>
-    </section>
+<main>
 
-    <section id="projektanfrage" style="margin-top: 60px;">
-      <h2>📅 Projektanfrage</h2>
-      <form id="requestForm">
-        <input type="text" name="spieler" placeholder="Spielername" required />
-        <input type="text" name="projekt" placeholder="Wunschprojekt" required />
-        <input type="text" name="deadline" placeholder="Deadline (z. B. 15.06.2025)" required />
-        <input type="text" name="budget" placeholder="Budget (z. B. 2000 Coins)" required />
-        <button type="submit">✅ Anfrage senden</button>
-        <p id="formStatus" style="margin-top: 12px; font-weight: 600;"></p>
-      </form>
-    </section>
+  <!-- Kontakt & Discord -->
+  <section>
+    <h2>Kontakt & Discord</h2>
+    <p>Du kannst uns jederzeit über Discord erreichen:</p>
+    <p><a href="https://discord.gg/Gcw8rbjC6H" target="_blank" rel="noopener noreferrer">Discord Server beitreten</a></p>
+    <p>Oder schreibe direkt eine Nachricht an <strong>Ma254</strong> oder <strong>MJ2311</strong> auf Discord.</p>
+  </section>
 
-    <section id="livestatus" style="margin-top: 80px; text-align:center;">
-      <h2>🎮 Live-Status</h2>
-      <p id="player-status">⏳ Lade Spielerstatus...</p>
-    </section>
+  <!-- Projektanfrage Formular -->
+  <section>
+    <h2>Projektanfrage Formular</h2>
+    <form id="project-form">
+      <label for="playername">Spielername</label>
+      <input type="text" id="playername" name="playername" placeholder="Dein Minecraft-Name" required />
 
-    <section id="bewertungen" style="margin-top: 80px;">
-      <h2>⭐ Kundenbewertungen</h2>
-      <div class="reviews">
-        <div class="review-card">
-          <strong>MJ2311</strong>
-          <div class="review-stars">★★★★★</div>
-          <div class="review-text">„Extrem schneller Bau – top Qualität!“</div>
-        </div>
-        <div class="review-card">
-          <strong>LegendSteve</strong>
-          <div class="review-stars">★★★★☆</div>
-          <div class="review-text">„Meine Farm läuft perfekt, danke!“</div>
-        </div>
-        <div class="review-card">
-          <strong>CoolyGoon</strong>
-          <div class="review-stars">★★★★★</div>
-          <div class="review-text">„Sehr freundlich und kreativ gebaut!“</div>
-        </div>
+      <label for="project">Wunschprojekt</label>
+      <textarea id="project" name="project" rows="4" placeholder="Beschreibe dein Bau- oder Farm-Projekt" required></textarea>
+
+      <label for="deadline">Deadline</label>
+      <input type="date" id="deadline" name="deadline" required />
+
+      <label for="budget">Budget (€)</label>
+      <input type="number" id="budget" name="budget" min="0" step="0.01" placeholder="Dein Budget in Euro" required />
+
+      <input type="submit" value="Anfrage senden" />
+    </form>
+    <p id="form-status" style="color:#58a6ff; font-weight:600; margin-top:10px;"></p>
+  </section>
+
+  <!-- FAQ Bot -->
+  <section>
+    <h2>FAQ-Bot – Frag mich!</h2>
+    <div class="faq-bot">
+      <div id="chat">
+        <div class="bot-msg message">Hallo! Frag mich was zum Bau- oder Farm-Service.</div>
       </div>
-    </section>
+      <form id="chat-form">
+        <input type="text" id="user-input" placeholder="Deine Frage..." autocomplete="off" required />
+        <button type="submit" aria-label="Frage senden">↵</button>
+      </form>
+    </div>
+  </section>
 
-    <section id="verfuegbarkeit" style="margin-top: 80px;">
-      <h2>📅 Verfügbarkeit</h2>
-      <table>
-        <thead>
-          <tr><th>Woche</th><th>Status</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>KW 24 (10.–16. Juni)</td><td>✅ Noch 2 freie Slots</td></tr>
-          <tr><td>KW 25 (17.–23. Juni)</td><td>🟡 1 Slot verfügbar</td></tr>
-          <tr><td>KW 26 (24.–30. Juni)</td><td>❌ Ausgebucht</td></tr>
-        </tbody>
-      </table>
-    </section>
+</main>
 
-  </main>
-
-  <footer>
-    Erstellt von Ma254
-  </footer>
+<footer>
+  Erstellt von Ma254
+</footer>
 
 <script>
-  // Simulierter Live-Status
-  const playerOnline = true; // Hier kannst du dynamisch anpassen, wenn du willst
-  const statusBox = document.getElementById("player-status");
-  if (playerOnline) {
-    statusBox.textContent = "✅ Ma254 ist aktuell online auf LegendBuild.de";
-    statusBox.style.color = "#7CFC00";
-  } else {
-    statusBox.textContent = "❌ Ma254 ist derzeit offline";
-    statusBox.style.color = "#ff5252";
-  }
+  // Discord Webhook URL
+  const webhookURL = 'https://discord.com/api/webhooks/1380941664537018509/7-sH9hQzyX1mTNxJOWFMIGZh2t8U3MTdSd7ZNYWHDuvwYND6vMwMKHq-oP2I-p-Wz_Zl';
 
-  // Anfrage-Formular & Discord Webhook
-  document.getElementById("requestForm").addEventListener("submit", async function(e){
+  // Projektanfrage Formular Submission
+  const projectForm = document.getElementById('project-form');
+  const formStatus = document.getElementById('form-status');
+
+  projectForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const form = new FormData(e.target);
-    const message = `📥 Neue Projektanfrage:\n👤 Spieler: ${form.get("spieler")}\n🏗️ Projekt: ${form.get("projekt")}\n🕒 Deadline: ${form.get("deadline")}\n💰 Budget: ${form.get("budget")}`;
-    const webhookUrl = "https://discord.com/api/webhooks/1380941664537018509/7-sH9hQzyX1mTNxJOWFMIGZh2t8U3MTdSd7ZNYWHDuvwYND6vMwMKHq-oP2I-p-Wz_Zl";
+    formStatus.textContent = '';
+
+    const playername = projectForm.playername.value.trim();
+    const project = projectForm.project.value.trim();
+    const deadline = projectForm.deadline.value;
+    const budget = projectForm.budget.value.trim();
+
+    if (!playername || !project || !deadline || !budget) {
+      formStatus.textContent = 'Bitte alle Felder ausfüllen.';
+      return;
+    }
+
+    // Discord-Webhook Nachricht formatieren
+    const content = `**Neue Projektanfrage**\nSpielername: ${playername}\nProjekt: ${project}\nDeadline: ${deadline}\nBudget: €${budget}`;
 
     try {
-      const res = await fetch(webhookUrl, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ content: message })
+      const res = await fetch(webhookURL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ content })
       });
-      const status = document.getElementById("formStatus");
       if (res.ok) {
-        status.textContent = "✅ Anfrage erfolgreich gesendet!";
-        status.style.color = "#7CFC00";
-        e.target.reset();
+        formStatus.style.color = '#2ecc71';
+        formStatus.textContent = 'Deine Anfrage wurde erfolgreich gesendet! Danke!';
+        projectForm.reset();
       } else {
-        status.textContent = "❌ Fehler beim Senden der Anfrage.";
-        status.style.color = "#ff5252";
+        throw new Error('Fehler beim Senden der Anfrage.');
       }
-    } catch(err) {
-      const status = document.getElementById("formStatus");
-      status.textContent = "❌ Fehler beim Senden der Anfrage.";
-      status.style.color = "#ff5252";
+    } catch (err) {
+      formStatus.style.color = '#e55353';
+      formStatus.textContent = 'Leider gab es ein Problem beim Senden. Versuch es später nochmal.';
+      console.error(err);
     }
+  });
+
+  // FAQ-Bot
+  const faq = {
+    "wie lange dauert ein bauprojekt?": "Das hängt vom Umfang ab, aber meistens zwischen 1 und 3 Tagen.",
+    "wie kann ich dich kontaktieren?": "Am besten über Discord: https://discord.gg/Gcw8rbjC6H",
+    "bist du auf legendbuild aktiv?": "Ja, ich baue und farm auf LegendBuild.de.",
+    "was kostet ein bauprojekt?": "Das variiert je nach Projekt, du kannst uns über das Anfrageformular dein Budget mitteilen.",
+    "welche arten von farmen baust du?": "Ich baue automatische XP-Farmen, Mobfarmen und Erntefarmen.",
+    "nimmst du auch komplexe aufträge an?": "Ja, ich nehme auch große und komplexe Projekte an. Kontaktiere mich einfach!",
+    "wie kann ich ein bauprojekt anfragen?": "Du kannst unser Projektanfrage-Formular auf der Webseite ausfüllen oder uns auf Discord schreiben."
+  };
+
+  const chat = document.getElementById("chat");
+  const form = document.getElementById("chat-form");
+  const userInput = document.getElementById("user-input");
+
+  function addMessage(text, sender) {
+    const msgDiv = document.createElement("div");
+    msgDiv.classList.add("message");
+    msgDiv.classList.add(sender === "user" ? "user-msg" : "bot-msg");
+    msgDiv.textContent = text;
+    chat.appendChild(msgDiv);
+    chat.scrollTop = chat.scrollHeight;
+  }
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const question = userInput.value.trim();
+    if (!question) return;
+
+    addMessage(question, "user");
+    userInput.value = "";
+
+    // Einfache FAQ-Suche (Case-insensitive)
+    const lowerQ = question.toLowerCase();
+
+    // Suche passendste Antwort
+    let answer = "Tut mir leid, das weiß ich gerade nicht. Versuch eine andere Frage.";
+    for (const key in faq) {
+      if (lowerQ.includes(key)) {
+        answer = faq[key];
+        break;
+      }
+    }
+
+    // Antwort nach kurzer Verzögerung anzeigen (für realistischeren Chat)
+    setTimeout(() => {
+      addMessage(answer, "bot");
+    }, 700);
   });
 </script>
 

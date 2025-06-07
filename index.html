@@ -1,136 +1,177 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LegendBuild Bau & Farm</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ma254 Bau & Farm Service – LegendBuild.de</title>
   <style>
     body {
-      margin: 0;
+      background-color: #1e1e1e;
+      color: #f1f1f1;
       font-family: 'Segoe UI', sans-serif;
-      background: #1a1a1a;
-      color: white;
+      margin: 0;
+      padding: 0;
     }
 
     header {
-      background: linear-gradient(to right, #4CAF50, #2E7D32);
-      padding: 2rem;
+      background-color: #2c2c2c;
+      padding: 20px;
       text-align: center;
+      border-bottom: 3px solid #4CAF50;
     }
 
     header h1 {
       margin: 0;
-      font-size: 3rem;
-    }
-
-    nav {
-      background: #111;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    nav a {
-      margin: 0 1rem;
-      color: #ccc;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
+      font-size: 2.5em;
       color: #4CAF50;
     }
 
-    section {
-      padding: 3rem 2rem;
-      max-width: 1000px;
+    main {
+      padding: 30px;
+      max-width: 800px;
       margin: auto;
+    }
+
+    section {
+      margin-bottom: 40px;
     }
 
     h2 {
       color: #4CAF50;
-      font-size: 2rem;
-    }
-
-    .services, .contact {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 2rem;
-    }
-
-    .card {
-      background: #2c2c2c;
-      padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #000;
+      border-left: 5px solid #4CAF50;
+      padding-left: 10px;
     }
 
     a {
-      color: #4CAF50;
+      color: #00aaff;
+      text-decoration: none;
+    }
+
+    a:hover {
       text-decoration: underline;
     }
 
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      margin-bottom: 15px;
+      background: #2a2a2a;
+      border: 1px solid #444;
+      color: white;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 12px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
     footer {
-      background: #111;
-      color: #999;
+      background-color: #2c2c2c;
+      color: #aaa;
       text-align: center;
-      padding: 1rem;
-      font-size: 0.8rem;
+      padding: 15px;
+      font-size: 0.9em;
+    }
+
+    #statusText {
+      text-align: center;
+      margin-top: 10px;
+      color: #4CAF50;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>LegendBuild Bau & Farm</h1>
-  <p>Dein Profi-Team für Bau und Farm-Projekte auf LegendBuild.de</p>
-</header>
+  <header>
+    <h1>Ma254 Bau- & Farm-Service</h1>
+    <p>LegendBuild.de – Dein zuverlässiger Partner für Minecraft-Projekte</p>
+  </header>
 
-<nav>
-  <a href="#about">Über uns</a>
-  <a href="#services">Leistungen</a>
-  <a href="#contact">Kontakt</a>
-</nav>
+  <main>
+    <section>
+      <h2>📌 Über uns</h2>
+      <p>Wir bauen, farmen und automatisieren für dich auf dem Citybuild-Server <strong>LegendBuild.de</strong>.</p>
+      <p>Egal ob Redstone-Farmen, schöne Häuser oder ganze Städte – wir übernehmen deinen Auftrag.</p>
+    </section>
 
-<section id="about">
-  <h2>Über uns</h2>
-  <p>Wir sind ein engagiertes Team auf dem Citybuild-Server <strong>LegendBuild.de</strong>, spezialisiert auf Farmbau, Gebäudebau und Redstone-Systeme. Schnell, zuverlässig und kreativ!</p>
-</section>
+    <section>
+      <h2>📬 Kontakt</h2>
+      <p>Discord: <a href="https://discord.gg/Gcw8rbjC6H" target="_blank">https://discord.gg/Gcw8rbjC6H</a></p>
+      <p>Oder direkt ingame: <code>/msg Ma254</code> oder <code>/msg MJ2311</code></p>
+    </section>
 
-<section id="services">
-  <h2>Unsere Leistungen</h2>
-  <div class="services">
-    <div class="card">
-      <h3>Farmbau</h3>
-      <p>Automatische Melonen-, Kürbis-, Eisen-, Kaktus- oder Spawner-Farmen. Effizient & platzsparend.</p>
-    </div>
-    <div class="card">
-      <h3>Bauprojekte</h3>
-      <p>Häuser, Villen, Märkte, Städte – wir bauen alles nach Wunsch!</p>
-    </div>
-    <div class="card">
-      <h3>Redstone-Systeme</h3>
-      <p>Türen, Lagerhäuser, Sortieranlagen und mehr. Kompakt und zuverlässig.</p>
-    </div>
-  </div>
-</section>
+    <section id="auftrag">
+      <h2>📝 Projektanfrage senden</h2>
+      <form id="projektForm">
+        <label>👤 Spielername:</label>
+        <input type="text" name="spieler" required>
 
-<section id="contact">
-  <h2>Kontakt</h2>
-  <div class="contact">
-    <div class="card">
-      <h3>Ingame kontaktieren</h3>
-      <p><strong>/msg Ma254</strong> oder <strong>/msg MJ2311</strong> auf LegendBuild.de</p>
-    </div>
-    <div class="card">
-      <h3>Discord-Server</h3>
-      <p><a href="https://discord.gg/Gcw8rbjC6H" target="_blank">Jetzt beitreten</a></p>
-    </div>
-  </div>
-</section>
+        <label>🏗️ Projektbeschreibung:</label>
+        <textarea name="projekt" rows="4" required></textarea>
 
-<footer>
-  © 2025 LegendBuild Bau & Farm – Erstellt von Ma254
-</footer>
+        <label>📅 Deadline (z. B. 15.06.2025):</label>
+        <input type="text" name="deadline" required>
+
+        <label>💰 Budget (Coins oder €):</label>
+        <input type="text" name="budget" required>
+
+        <button type="submit">Anfrage senden</button>
+      </form>
+      <p id="statusText"></p>
+    </section>
+  </main>
+
+  <footer>
+    Erstellt von Ma254
+  </footer>
+
+  <script>
+    const webhookUrl = "https://discord.com/api/webhooks/1380941664537018509/7-sH9hQzyX1mTNxJOWFMIGZh2t8U3MTdSd7ZNYWHDuvwYND6vMwMKHq-oP2I-p-Wz_Zl";
+
+    document.getElementById("projektForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const data = {
+        spieler: form.spieler.value,
+        projekt: form.projekt.value,
+        deadline: form.deadline.value,
+        budget: form.budget.value,
+      };
+
+      const discordMessage = {
+        content: `📩 **Neue Projektanfrage**\n\n👤 **Spieler**: ${data.spieler}\n🏗️ **Projekt**: ${data.projekt}\n📅 **Deadline**: ${data.deadline}\n💰 **Budget**: ${data.budget}`
+      };
+
+      fetch(webhookUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(discordMessage)
+      }).then(response => {
+        if (response.ok) {
+          document.getElementById("statusText").textContent = "✅ Anfrage erfolgreich gesendet!";
+          form.reset();
+        } else {
+          document.getElementById("statusText").textContent = "❌ Fehler beim Senden. Bitte später versuchen.";
+        }
+      }).catch(() => {
+        document.getElementById("statusText").textContent = "❌ Netzwerkfehler. Bitte erneut versuchen.";
+      });
+    });
+  </script>
 
 </body>
 </html>
